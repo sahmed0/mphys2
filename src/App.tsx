@@ -31,7 +31,9 @@ export default function App() {
 
           <SearchBar onSearch={setSearchQuery} />
 
-          <TableOfContents sections={paperData.sections} />
+          <div className="lg:hidden">
+            <TableOfContents sections={paperData.sections} />
+          </div>
 
           {paperData.sections.map((section: any, index) => (
             <React.Fragment key={index}>
@@ -57,6 +59,9 @@ export default function App() {
               </div>
               <ThemeToggle />
             </div>
+
+            <TableOfContents sections={paperData.sections} isSidebar />
+
             <Footer authors={paperData.authorDetails} />
           </div>
         </aside>

@@ -15,15 +15,15 @@ export const citations: Citation[] = [
 export const paperData = {
   title: "The scaling laws governing the dynamics of rigid, pressure-driven spheres in narrow, fluid-filled elastic tubes",
   authors: ["Sajid Ahmed"],
-  abstract: "This report provides comprehensive evidence for the existence of the intermediate and high-speed scaling laws predicted by Rallabandi et al. (2021).",
+  abstract: "This report presents a comprehensive analysis of the elastohydrodynamic behaviour of rigid intruders in lubricated elastic tubes. It provides new experimental evidence for the intermediate and high-speed drag force scaling laws predicted by Rallabandi et al. (2021).",
   sections: [
     {
       title: "Key Highlights",
-      content: "- Validated 2021 theoretical models for elastohydrodynamic scaling.\n- Developed Python scripts for automated high-speed video analysis.\n- Built custom experimental hardware for fluid-structure interaction."
+      content: "- New data to validate elastohydrodynamic drag force scaling theory.\n- Developed custom Python scripts for automated high-speed video analysis.\n- Designed and built custom experimental hardware for fluid-structure interaction."
     },
     {
       title: "Introduction",
-      content: "This study investigates how oversized objects move through fluid-filled elastic tubes - a physics problem with massive implications for soft robotics, microfluidics, and biology (such as blood flow in capillaries and eggs in the oviduct). \n\n While mathematical models have existed since 1968, this project sought to provide much-needed experimental evidence to confirm the most recent theoretical predictions from Rallabandi et al. (2021)."
+      content: "This report presents a comprehensive analysis of the elastohydrodynamic behaviour of rigid intruders in lubricated elastic tubes. It provides new experimental evidence for the intermediate and high-speed drag force scaling laws predicted by Rallabandi et al. (2021)."
     },
     {
       title: "Theoretical Framework",
@@ -31,21 +31,21 @@ export const paperData = {
     },
     {
       title: "Methodology",
-      content: "We designed and constructed a precision experimental rig using a silicone tube and fluid reservoirs filled with rapeseed oil to simulate elastohydrodynamic conditions.\n - Hardware: An Elveflow OB1 Mk3+ pressure controller was used to apply hydraulic pressure to drive spherical intruders (10mm to 18mm) through the elastic medium. A high-speed camera was used to record the motion of the intruders. \n - Software: Developed a custom Python pipeline to process high-framerate video, extracting ball velocity and performing piecewise linear fits to identify the power law exponents.",
+      content: "We designed and constructed a precision experimental rig using a silicone tube and fluid reservoirs filled with rapeseed oil to simulate elastohydrodynamic conditions.\n - Hardware: An Elveflow OB1 Mk3+ pressure controller was used to apply hydraulic pressure to drive spherical intruders (10mm to 18mm) through the elastic medium. We used a high-speed camera to record the intruders' motion. \n - Software: Developed a custom Python pipeline to process high-framerate video, extracting ball velocity and performing piecewise linear fits to identify the power law exponents.",
       figures: [
         { title: "Figure 1: Experimental Apparatus", url: "public/apparatus.png" }
       ]
     },
     {
       title: "Results",
-      content: "The data confirmed two major theoretical regimes: \n - High-Speed Scaling: Observed in 11mm to 15mm intruders. \n - Intermediate-Speed Scaling: Observed in 18mm intruders. \n - While the 10mm ball showed linear scaling due to minimal tube deformation, the overall data successfully mapped the transition between different physical states as predicted by modern theory",
+      content: "The data confirmed two major theoretical regimes: \n - High-Speed Scaling: Observed in 11mm to 15mm intruders. \n - Intermediate-Speed Scaling: Observed in 18mm intruders.",
       figures: [
         { title: "Figure 2: Table of Results", url: "public/table.png" }
       ]
     },
     {
       title: "Discussion",
-      content: "These results prove that modern elastohydrodynamic models are accurate predictors for real-world fluid systems. By validating these power laws, this work provides a roadmap for engineers to better predict friction and flow in flexible medical devices and bio-inspired robots. \n\n Sources of systematic errors include the assumptions that pressure drops due to Poiseuille flow are negligible, the largest spheres act like slender intruders, and the Young's modulus of the silicone tubes did not change after oil submersion. \n\n Future work would further refine the bridge between theory and application by conducting tests with non-spherical intruders and different elastic materials, and by using a mechanically driven apparatus to drive the intruders."
+      content: "These results prove that modern elastohydrodynamic models are accurate predictors for real-world fluid systems. By validating these power laws, this work provides engineers with a roadmap for predicting friction and flow more accurately in flexible medical devices and bio-inspired robots. \n\n Sources of systematic errors include the assumptions that pressure drops due to Poiseuille flow are negligible, the largest spheres act like slender intruders, and the Young's modulus of the silicone tubes did not change after oil submersion. \n\n Future work would further refine the bridge between theory and application by conducting tests with non-spherical intruders and different elastic materials, and by using a mechanically driven apparatus to drive the intruders."
     },
     {
       title: "Conclusion",
@@ -66,7 +66,7 @@ export const paperData = {
     {
       name: "Sajid Ahmed",
       bio: "Integrated Master's of Physics (MPhys), The University of Manchester",
-      linkedin: "https://www.linkedin.com/in/s-ahmed1"
+      website: "https://sajidahmed.co.uk/"
     }
   ],
   citations
