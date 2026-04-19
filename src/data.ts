@@ -33,14 +33,14 @@ export const paperData = {
       title: "Methodology",
       content: "We designed and constructed a precision experimental rig using a silicone tube and fluid reservoirs filled with rapeseed oil to simulate elastohydrodynamic conditions.\n - Hardware: An Elveflow OB1 Mk3+ pressure controller was used to apply hydraulic pressure to drive spherical intruders (10mm to 18mm) through the elastic medium. We used a high-speed camera to record the intruders' motion. \n - Software: Developed a custom Python pipeline to process high-framerate video, extracting ball velocity and performing piecewise linear fits to identify the power law exponents.",
       figures: [
-        { title: "Figure 1: Experimental Apparatus", url: "/apparatus.png" }
+        { title: "Figure 1: Experimental Apparatus", url: "apparatus.png" }
       ]
     },
     {
       title: "Results",
       content: "The data confirmed two major theoretical regimes: \n - High-Speed Scaling: Observed in 11mm to 15mm intruders. \n - Intermediate-Speed Scaling: Observed in 18mm intruders.",
       figures: [
-        { title: "Figure 2: Table of Results", url: "/table.png" }
+        { title: "Figure 2: Table of Results", url: "table.png" }
       ]
     },
     {
@@ -56,7 +56,7 @@ export const paperData = {
       content: "- M. J. Lighthill, “Pressure-forcing of tightly fitting pellets along fluid-filled elastic tubes”, Journal of Fluid Mechanics 34, 113 (1968). \n - B. Rallabandi, J. Eggers, M. A. Herrada, and H. A. Stone, “Motion of a tightly fitting axisymmetric object through a lubricated elastic tube”, Journal of Fluid Mechanics 926, A27 (2021)"
     }
   ],
-  pdfUrl: "/Report.pdf",
+  pdfUrl: "report.pdf",
   tooltips: {
     "axisymmetric": "A 3D shape that is symmetrical about one or more of its axes.",
     "elastohydrodynamic": "A type of fluid film lubrication that occurs where very high contact pressure causes elastic deformations of the contacting surfaces.",
