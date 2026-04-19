@@ -33,8 +33,8 @@ export function TableOfContents({ sections, isSidebar = false }: TableOfContents
                 className={`
                   hover:underline
                   ${isSidebar
-                    ? 'text-base font-serif text-accent'
-                    : 'text-base md:text-lg font-serif text-accent'}
+                    ? 'text-md font-sans text-accent'
+                    : 'text-lg font-sans text-accent'}
                 `}
               >
                 {section.title}

@@ -1,4 +1,4 @@
-import { Download } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 interface DownloadButtonProps {
   pdfUrl: string;
@@ -11,13 +11,13 @@ export function DownloadButton({ pdfUrl, isMobile }: DownloadButtonProps) {
       href={pdfUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 border border-transparent font-sans font-bold shadow-sm text-white bg-accent hover:bg-teal-700 transition-colors ${isMobile
-        ? 'px-3 py-1.5 text-sm rounded-md'
-        : 'px-4 py-2 w-full text-base rounded-md'
+      className={`inline-flex items-center justify-center gap-3 border border-transparent font-sans font-bold shadow-sm text-white bg-accent hover:bg-teal-700 transition-colors ${isMobile
+        ? 'px-4 py-2 text-lg rounded-md'
+        : 'px-6 py-4 w-full text-xl rounded-md'
         }`}
     >
-      <Download size={isMobile ? 16 : 20} />
-      <span>{isMobile ? 'View PDF' : 'View Full Paper'}</span>
+      <FileText size={isMobile ? 20 : 25} />
+      <span>{isMobile ? 'View Full Paper' : 'View Full Paper'}</span>
     </a>
   );
 }

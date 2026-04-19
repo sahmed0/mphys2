@@ -20,7 +20,7 @@ export function ThemeToggle() {
       className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors"
       aria-label="Toggle theme"
     >
-      {isDark ? <Sun size={15} /> : <Moon size={15} />}
+      {isDark ? <Sun size={25} /> : <Moon size={25} />}
     </button>
   );
 }

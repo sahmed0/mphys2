@@ -15,7 +15,7 @@ export const citations: Citation[] = [
 export const paperData = {
   title: "The scaling laws governing the dynamics of rigid, pressure-driven spheres in narrow, fluid-filled elastic tubes",
   authors: ["Sajid Ahmed"],
-  abstract: "This report presents a comprehensive analysis of the elastohydrodynamic behaviour of rigid intruders in lubricated elastic tubes. It provides new experimental evidence for the intermediate and high-speed drag force scaling laws predicted by Rallabandi et al. (2021).",
+  summary: "This report presents a comprehensive analysis of the elastohydrodynamic behaviour of rigid intruders in lubricated elastic tubes. It provides new experimental evidence for the intermediate and high-speed drag force scaling laws predicted by Rallabandi et al. (2021).",
   sections: [
     {
       title: "Key Highlights",

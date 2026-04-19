@@ -26,7 +26,7 @@ export default function App() {
           <PaperHeader
             title={paperData.title}
             authors={paperData.authors}
-            abstract={paperData.abstract}
+            summary={paperData.summary}
           />
 
           <SearchBar onSearch={setSearchQuery} />
