@@ -11,7 +11,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, '.'),
     },
   },
-  base: "/",
+  base: "/MPhys2/",
   server: {
     allowedHosts: [
       'knelt-reapply-capably.ngrok-free.dev', // ngrok url for mobile testing
