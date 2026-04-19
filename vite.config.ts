@@ -3,19 +3,19 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-export default defineConfig(() => {
-  return {
-    plugins: [react(), tailwindcss()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '.'),
     },
-    base: '/MPhys-Dissertation/',
-    server: {
-      allowedHosts: [
-        'knelt-reapply-capably.ngrok-free.dev'
-      ]
-    }
-  };
-});
+  },
+  base: "/",
+  server: {
+    allowedHosts: [
+      'knelt-reapply-capably.ngrok-free.dev', // ngrok url for mobile testing
+    ],
+  },
+
+})
