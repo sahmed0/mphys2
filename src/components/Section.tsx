@@ -49,7 +49,7 @@ const Highlight = ({ children, query, tooltips }: { children: React.ReactNode, q
       const subParts = part.split(new RegExp(`(${query})`, 'gi'));
       return subParts.map((p, j) =>
         p.toLowerCase() === query.toLowerCase() ? (
-          <mark key={j} className="bg-yellow-200">{p}</mark>
+          <mark key={j} className="search-match">{p}</mark>
         ) : (
           p
         )

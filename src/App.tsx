@@ -11,11 +11,60 @@ import { ThemeToggle } from './components/ThemeToggle';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [matchCount, setMatchCount] = useState(0);
+  const [currentMatchIndex, setCurrentMatchIndex] = useState(0);
+
+  // Reset index when search query changes
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    setCurrentMatchIndex(0);
+  };
+
+  const handleNextMatch = () => {
+    if (matchCount > 0) {
+      setCurrentMatchIndex((prev) => (prev + 1) % matchCount);
+    }
+  };
+
+  const handlePrevMatch = () => {
+    if (matchCount > 0) {
+      setCurrentMatchIndex((prev) => (prev - 1 + matchCount) % matchCount);
+    }
+  };
+
+  // Update match count and jump to first match on query change
+  React.useEffect(() => {
+    const matches = document.querySelectorAll('.search-match');
+    setMatchCount(matches.length);
+
+    // Clear previous active states
+    matches.forEach(m => m.classList.remove('is-active'));
+
+    if (matches.length > 0 && searchQuery) {
+      const firstMatch = matches[0];
+      firstMatch.classList.add('is-active');
+      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [searchQuery]);
+
+  // Handle jumping to next/prev matches
+  React.useEffect(() => {
+    const matches = document.querySelectorAll('.search-match');
+
+    matches.forEach((m, idx) => {
+      if (idx === currentMatchIndex) {
+        m.classList.add('is-active');
+        m.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        m.classList.remove('is-active');
+      }
+    });
+  }, [currentMatchIndex]);
 
   return (
-    <div className="min-h-screen dark:bg-gray-950 transition-colors relative">
+    <div className="min-h-screen bg-stone-50 dark:bg-gray-950 transition-colors relative">
       {/* Mobile Top Bar */}
-      <div className="lg:hidden fixed top-0 w-full z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 py-2 flex items-center justify-between shadow-sm">
+      <div className="lg:hidden fixed top-0 w-full z-50 bg-white/75 dark:bg-gray-950/75 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 py-2 flex items-center justify-between shadow-sm">
         <ThemeToggle />
         <DownloadButton pdfUrl={paperData.pdfUrl} isMobile />
       </div>
@@ -29,15 +78,27 @@ export default function App() {
             summary={paperData.summary}
           />
 
-          <SearchBar onSearch={setSearchQuery} />
+          <SearchBar
+            onSearch={handleSearch}
+            matchCount={matchCount}
+            currentMatchIndex={currentMatchIndex}
+            onNext={handleNextMatch}
+            onPrev={handlePrevMatch}
+          />
 
           <div className="lg:hidden">
             <TableOfContents sections={paperData.sections} />
           </div>
 
-          {paperData.sections.map((section: any, index) => (
+          {paperData.sections.map((section: any, index: number) => (
             <React.Fragment key={index}>
-              <Section title={section.title} content={section.content} searchQuery={searchQuery} tooltips={paperData.tooltips} figures={section.figures} />
+              <Section
+                title={section.title}
+                content={section.content}
+                searchQuery={searchQuery}
+                tooltips={paperData.tooltips}
+                figures={section.figures}
+              />
               {section.title === "References" && <BibTeXExportButton citations={paperData.citations} />}
             </React.Fragment>
           ))}

@@ -8,8 +8,8 @@ export interface Citation {
 }
 
 export const citations: Citation[] = [
-  { id: "lighthill1968", author: "Lighthill, M. J.", year: 1968, title: "Pressure-forcing of tightly fitting pellets along fluid-filled elastic tubes", journal: "Journal of Fluid Mechanics" },
-  { id: "rallabandi2021", author: "Rallabandi, B., Eggers, J., Herrada, M. A., & Stone, H. A.", year: 2021, title: "Motion of a tightly fitting axisymmetric object through a lubricated elastic tube", journal: "Journal of Fluid Mechanics" }
+  { id: "rallabandi2021", author: "Rallabandi, B., Eggers, J., Herrada, M. A., & Stone, H. A.", year: 2021, title: "Motion of a tightly fitting axisymmetric object through a lubricated elastic tube", journal: "Journal of Fluid Mechanics" },
+  { id: "barakat2018a", author: "Barakat, J. M., & Shaqfeh, E. S. G.", year: 2018, title: "The steady motion of a closely fitting vesicle in a tube", journal: "Journal of Fluid Mechanics" }
 ];
 
 export const paperData = {
@@ -23,11 +23,11 @@ export const paperData = {
     },
     {
       title: "Introduction",
-      content: "This report presents a comprehensive analysis of the elastohydrodynamic behaviour of rigid intruders in lubricated elastic tubes. It provides new experimental evidence for the intermediate and high-speed drag force scaling laws predicted by Rallabandi et al. (2021)."
+      content: "This report investigates the elastohydrodynamic problem of a rigid, axisymmetric intruder being driven through a narrow elastic tube filled with a lubricating fluid (Barakat & Shaqfeh, 2018; Rallabandi et al. 2021). Specifically, we examine the power laws relating the propulsive force on the intruder to its velocity. Such a system is ubiquitous in natural and engineered settings, and a rigorous characterisation of its force-velocity relationship is crucial for diverse applications. \n\n The importance of studying this system lies in its similarities to many real-world phenomena, including the motion of red blood cells in capillaries, the movement of eggs in oviducts, soft robotics, and industrial manufacturing processes that rely on material extrusion."
     },
     {
       title: "Theoretical Framework",
-      content: "The core objective was to mathematically predict and experimentally verify the scaling laws - the specific power-law relationships between the drag force and the speed of an intruder: \n\n$$F \\propto \\begin{cases} V^{1/2} & \\text{low speed} \\\\ V^{2/3} & \\text{intermediate speed} \\\\ V^{4/5} & \\text{high speed} \\end{cases}$$ \n\n These relationships are derived from the construction of an ordinary differential equation that accounts for the lubrication film pressure, hoop stress resistance and axial membrane tension in the elastic tube."
+      content: "The authors constructed the following ordinary differential equation which accounts for the lubrication film pressure, hoop stress resistance and axial membrane tension in the elastic tube.: \n\n$$\\frac{dh}{dz} - \\frac{6 \\mu V a^{2}}{Eb} \\frac{(h-h^{*})}{h^{3}} + \\frac{d\\delta}{dz} = 0$$ \n\n This equation was solved using perturbative asymptotic analysis and direct numerical simulations - resulting in the following power-law relationships between the drag force and the speed of an intruder: \n\n$$F \\propto \\begin{cases} V^{1/2} & \\text{low speed} \\\\ V^{2/3} & \\text{intermediate speed} \\\\ V^{4/5} & \\text{high speed} \\end{cases}$$ \n\n The objective of this study is to experimentally test these power laws."
     },
     {
       title: "Methodology",
@@ -38,7 +38,7 @@ export const paperData = {
     },
     {
       title: "Results",
-      content: "The data confirmed two major theoretical regimes: \n - High-Speed Scaling: Observed in 11mm to 15mm intruders. \n - Intermediate-Speed Scaling: Observed in 18mm intruders.",
+      content: "The data confirmed two major theoretical regimes: \n - 11mm to 15mm intruders: Observed High-Speed Scaling. \n - 18mm intruder: Observed Intermediate-Speed Scaling. \n - 10mm intruder: Linear scaling, likely too small to create deformation. \n - 12mm intruder: Possibly high-speed scaling but requires further experiments. \n - Low-speed power law was not observed in any of our experiments.",
       figures: [
         { title: "Figure 2: Table of Results", url: "table.png" }
       ]
@@ -53,14 +53,24 @@ export const paperData = {
     },
     {
       title: "References",
-      content: "- M. J. Lighthill, “Pressure-forcing of tightly fitting pellets along fluid-filled elastic tubes”, Journal of Fluid Mechanics 34, 113 (1968). \n - B. Rallabandi, J. Eggers, M. A. Herrada, and H. A. Stone, “Motion of a tightly fitting axisymmetric object through a lubricated elastic tube”, Journal of Fluid Mechanics 926, A27 (2021)"
+      content: "\n - B. Rallabandi, J. Eggers, M. A. Herrada, and H. A. Stone, “Motion of a tightly fitting axisymmetric object through a lubricated elastic tube”, Journal of Fluid Mechanics 926, A27 (2021) \n - J. M. Barakat and E. S. G. Shaqfeh, “The steady motion of a closely fitting vesicle in a tube”, Journal of Fluid Mechanics 835, 721 (2018)."
     }
   ],
   pdfUrl: "report.pdf",
   tooltips: {
     "axisymmetric": "A 3D shape that is symmetrical about one or more of its axes.",
     "elastohydrodynamic": "A type of fluid film lubrication that occurs where very high contact pressure causes elastic deformations of the contacting surfaces.",
-    "poiseuille": "The laminar flow of a viscous fluid through a cylindrical pipe."
+    "poiseuille": "The laminar flow of a viscous fluid through a cylindrical pipe.",
+    "fluid-structure interaction": "The study of interactions between fluids (gases & liquids) and solid structures.",
+    "ordinary differential equation": "An equation that relates a function to its derivatives.",
+    "lubrication film pressure": "The pressure of the fluid film between two surfaces.",
+    "hoop stress": "The stress in a direction perpendicular/tangential to the axis of a cylinder.",
+    "axial membrane tension": "The longitudinal tension in the membrane of a cylinder.",
+    "perturbative asymptotic analysis": "A method of solving differential equations by approximating the solution as a series expansion.",
+    "direct numerical simulations": "A method of solving differential equations by numerical integration.",
+    "power laws": "A relationship between two quantities where one is proportional to a power of the other.",
+    "piecewise linear fits": "A method of fitting a function to data by fitting a series of linear functions to the data.",
+    "Young's modulus": "A measure of the stiffness of a material.",
   },
   authorDetails: [
     {
