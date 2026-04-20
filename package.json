@@ -1,6 +1,6 @@
 {
-  "name": "thesis-website",
-  "homepage": "https://sajidahmed.co.uk/MPhys2/",
+  "name": "mphys2-website",
+  "homepage": ".",
   "private": true,
   "version": "0.0.0",
   "type": "module",
